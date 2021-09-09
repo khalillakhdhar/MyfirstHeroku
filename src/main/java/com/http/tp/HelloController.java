@@ -1,13 +1,16 @@
 package com.http.tp;
-
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+@Controller
 
-@RestController
 public class HelloController {
-@GetMapping("")
-public String welcome()
-{
-return "<h1>heroku is simple to use<h1>";	
+@GetMapping("/")
+public String index(Model model) { // add `message`
+	
+
+model.addAttribute("message", " ceci est un message dynamique.");
+// return view name
+return "index";
 }
 }
