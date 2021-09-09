@@ -8,6 +8,6 @@ public class HelloController {
 @GetMapping("")
 public String welcome()
 {
-return "heroku is simple to use";	
+return "<h1>heroku is simple to use<h1>";	
 }
 }
